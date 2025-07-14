@@ -7,7 +7,7 @@ from utils.helper import load_causes
 
 st.set_page_config(page_title="CareConnect - Charity Platform", layout="wide")
 
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Charity_icon.svg/768px-Charity_icon.svg.png", width=150)
+st.image("💖")
 
 
 menu = st.sidebar.radio("Navigate", ["Home", "Causes", "Donate", "Enquire", "Impact Stories"])
