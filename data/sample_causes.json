@@ -1,1 +1,15 @@
 
+[
+  {
+    "title": "Support Education for Girls",
+    "description": "Help 100+ girls from rural areas access books, uniforms, and quality education.",
+    "category": "Girl Education",
+    "image": "https://example.com/girl_edu.jpg"
+  },
+  {
+    "title": "Animal Shelter Care",
+    "description": "Feed and care for over 200 stray and injured animals this month.",
+    "category": "Animal Care",
+    "image": "https://example.com/animal.jpg"
+  }
+]
