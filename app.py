@@ -1,34 +1,21 @@
-
-
 import streamlit as st
-from components.cause_card import display_causes
-from components.contact_form import enquiry_form
-from utils.helper import load_causes
 
-# Use emoji instead of image path to avoid file errors
-st.set_page_config(page_title="CareConnect - Charity Platform", page_icon="💖", layout="wide")
+st.set_page_config(page_title="CareConnect", page_icon="💖", layout="wide")
 
+# ✅ Either show emoji with markdown
 st.markdown("## 💖 Welcome to CareConnect 💖")
 
-menu = st.sidebar.radio("Navigate", ["Home", "Causes", "Donate", "Enquire", "Impact Stories"])
+# ✅ OR load image from URL
+# st.image("https://upload.wikimedia.org/wikipedia/commons/5/5e/Charity_icon.svg", width=100)
+
+st.sidebar.title("Navigation")
+menu = st.sidebar.radio("Navigate", ["Home", "Donate"])
 
 if menu == "Home":
-    st.title("Welcome to CareConnect")
-    st.markdown("Give a hand, change a life.")
-    display_causes(load_causes("data/sample_causes.json"), limit=3)
-
-elif menu == "Causes":
-    st.header("Support a Cause")
-    display_causes(load_causes("data/sample_causes.json"))
+    st.header("Home")
+    st.write("Welcome to our charity platform.")
 
 elif menu == "Donate":
-    st.header("Donate Now")
-    st.info("Select a cause and enter your details to donate.")
+    st.header("Donate")
+    st.write("Support a cause you care about.")
 
-elif menu == "Enquire":
-    st.header("Get Involved or Enquire")
-    enquiry_form()
-
-elif menu == "Impact Stories":
-    st.header("Real Stories That Matter")
-    st.markdown("These are stories from those you’ve helped. ❤️")
